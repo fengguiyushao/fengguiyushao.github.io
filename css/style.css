@@ -482,3 +482,9 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; color:#333; }
 #green .post .post-title { background: #fffecb; color: #067d01; }
 #green .post .post-title a { color: #067d01; }
 
+/*************************
+ * iPhone
+*************************/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    body {overflow-x:  hidden;}
+}
