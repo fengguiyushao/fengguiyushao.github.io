@@ -173,9 +173,27 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 
 Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加入`prettyprint`即可。所以我选择了Google Code Prettify。
 
-##搭建本地jekyll环境
+##本地jekyll环境
 
+由于写blog时jekyll已经安装好了，就不在说如何安装了，简单说下jekyll的基础使用
 
+假如自己还没有生成自己的站点，可以用一下3行代码建立博客：
+
+	##新建一个博客
+	$ jekyll new blog
+
+	##切换到博客目录下，这时候已经生成文件了
+	$ cd blog
+
+	##启动服务，以4000为端口
+	$ jekyll serve
+
+这样就可以用`http://localhost:4000`访问自己的博客了。
+
+还有一个较实用的指令是：
+
+	##监控文件变化，自动生成到_site目录下
+	$ jekyll serve --watch
 
 
 ##结语
