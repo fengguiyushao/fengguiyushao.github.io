@@ -24,7 +24,7 @@ blogDesc:         Just Home
 favicon:          /favicon.ico
 theme:            default
 
-disqus:           piznblog
+disqus:           robinzhoublog
 
 copyright:        Copyright © 2011-2012 fengguiyushao All rights reserved.
 test:             ok
