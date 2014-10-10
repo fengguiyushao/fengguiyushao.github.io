@@ -447,7 +447,11 @@ img[src="http://eiv.baidu.com/hmt/icon/21.gif"]{
 
 /*文章模板页样式*/
 .author_date{margin-top:120px;}
-.copyright{font-size:12px; margin-bottom:60px;}
+.copyright {
+	font-size: 12px; 
+	margin-bottom: 60px;
+	text-indent: 2em;
+}
 .back_to_index{
 	position: absolute;
 	top:13px;
