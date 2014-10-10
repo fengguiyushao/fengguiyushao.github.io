@@ -1,28 +1,63 @@
 ---
-layout: default
-date: Index
+layout: default_index
 ---
-{% for rpost in paginator.posts %}
-	<article class="post fn-clear">
-        <h2 class="post-title"><a href="{{ site.url }}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h2>
-        <p class="time"><time pubdate="{{ rpost.date }}">{{ rpost.date | date_to_string }}</time></p>
-        {% if site.indexContent == true %}
-        {{ rpost.content }}
-        {% else %}
-        <p>{{ rpost.description }}</p>
-        {% endif %}
-    </article>
-{% endfor %}
-{% if paginator.total_pages > 1 %}
-    <nav></nav> id="pagination" class="fn-clear">
-        <ul class="pagination">
-            {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                    <li class="current"><a href="javascript:void(0);">{{ page }}</a></li>
-                {% else %}
-                    <li><a href="{{ site.url }}/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </nav>
-{% endif %}	
+
+
+
+
+
+
+<div id="main_content">
+
+	<!-- <h1>最新文章</h1> -->
+
+
+
+	<!-- 全部列表一起输出 -->
+
+	<ul class="index_list">
+	    {% for post in site.posts %}
+	        <li>
+	        	<a href="{{ site.url }}{{ post.url }}">
+	        		<span>{{ post.title }}</span>	
+	        		<span class="index_list_date"><span> - - - - </span><time>{{ post.date | date_to_string }}</time></span>
+	        	</a>	
+	        </li>
+	    {% endfor %}
+	</ul> 
+
+
+
+
+	<!-- 按年份输出列表 -->
+<!-- 	<ul class="index_list">
+		{% for post in site.posts %}
+
+
+		   {% unless post.next %}
+		        <h1 class="index_global_year_title">{{ post.date | date: '%Y' }}</h1>
+		   {% else %}
+		        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+		        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+		        {% if year != nyear %}
+		        <h1 class="index_global_year_title">{{ post.date | date: '%Y' }}</h1>
+		        {% endif %}
+		   {% endunless %}
+
+		   <li>
+		        <a href="{{ post.url }}">
+		       		<span>{{ post.title }}</span>
+		       		<span class="index_list_date"><span> - - - - </span><time>{{ post.date | date:"%m-%d" }} </time></span>
+		        </a>
+		   </li>
+		{% endfor %}
+	</ul> -->
+
+</div>
+
+
+
+
+
+
+
