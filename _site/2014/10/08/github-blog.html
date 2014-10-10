@@ -36,29 +36,31 @@
 						<a href="/index.html" id="back-to-index" class="button"><span>&lt;&lt; Back</span></a>
 					</section>
 					<article>
-						<h3 id="github-blog">搭建github blog</h3>
+						<h3>搭建github blog</h3>
 
 <p><a href="http://github.com" title="Github">Github</a>很好的将代码和社区联系在了一起，于是发生了很多有趣的事情，世界也因为他美好了一点点。Github作为现在最流行的代码仓库，已经得到很多大公司和项目的青睐，比如<a href="https://github.com/jquery/jquery" title="jQuery@github">jQuery</a>、<a href="https://github.com/twitter/bootstrap" title="Twitter@github">Twitter</a>等。为使项目更方便的被人理解，介绍页面少不了，甚至会需要完整的文档站，Github替你想到了这一点，他提供了<a href="http://pages.github.com/" title="Github Pages">Github Pages</a>的服务，不仅可以方便的为项目建立介绍站点，也可以用来建立个人博客。</p>
 
 <p>Github Pages有以下几个优点：</p>
 
 <ul>
-  <li>轻量级的博客系统，没有麻烦的配置</li>
-  <li>使用标记语言，比如<a href="http://wowubuntu.com/markdown/">Markdown</a></li>
-  <li>无需自己搭建服务器</li>
-  <li>根据Github的限制，对应的每个站有300MB空间</li>
-  <li>可以绑定自己的域名</li>
+<li>轻量级的博客系统，没有麻烦的配置</li>
+<li>使用标记语言，比如<a href="http://wowubuntu.com/markdown/">Markdown</a></li>
+<li>无需自己搭建服务器</li>
+<li>根据Github的限制，对应的每个站有300MB空间</li>
+<li>可以绑定自己的域名</li>
 </ul>
+
 
 <p>当然他也有缺点：</p>
 
 <ul>
-  <li>使用<a href="https://github.com/mojombo/jekyll" title="Jekyll">Jekyll</a>模板系统，相当于静态页发布，适合博客，文档介绍等。</li>
-  <li>动态程序的部分相当局限，比如没有评论，不过还好我们有解决方案。</li>
-  <li>基于Git，很多东西需要动手，不像Wordpress有强大的后台</li>
+<li>使用<a href="https://github.com/mojombo/jekyll" title="Jekyll">Jekyll</a>模板系统，相当于静态页发布，适合博客，文档介绍等。</li>
+<li>动态程序的部分相当局限，比如没有评论，不过还好我们有解决方案。</li>
+<li>基于Git，很多东西需要动手，不像Wordpress有强大的后台</li>
 </ul>
 
-<h3 id="section">购买、绑定独立域名</h3>
+
+<h3>购买、绑定独立域名</h3>
 
 <p>虽说<a href="http://www.godaddy.com/" title="Godaddy">Godaddy</a>曾支持过SOPA，并且首页放着极其不专业的大胸美女，但是作为域名服务商他做的还不赖，选择它最重要的原因是他支持支付宝，没有信用卡有时真的很难过。</p>
 
@@ -69,15 +71,17 @@
 <p>我们选择DNSPod的服务，他们的产品做得不错，易用、免费，收费版有更高端的功能，暂不需要。注册登录之后，按照DNSPod的说法，只需三步（我们插入一步）：</p>
 
 <ul>
-  <li>首先添加域名记录，可参考DNSPod的帮助文档：<a href="https://www.dnspod.cn/Support">https://www.dnspod.cn/Support</a></li>
-  <li>在DNSPod自己的域名下添加一条A记录，地址就是Github Pages的服务IP地址：<code>192.30.252.153</code></li>
-  <li>在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。如果你不明白在哪里修改，可以参考这里：<a href="https://www.dnspod.cn/support/index/fid/119">Godaddy注册的域名如何使用DNSPod</a></li>
-  <li>等待域名解析生效</li>
+<li>首先添加域名记录，可参考DNSPod的帮助文档：<a href="https://www.dnspod.cn/Support">https://www.dnspod.cn/Support</a></li>
+<li>在DNSPod自己的域名下添加一条A记录，地址就是Github Pages的服务IP地址：<code>192.30.252.153</code></li>
+<li>在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。如果你不明白在哪里修改，可以参考这里：<a href="https://www.dnspod.cn/support/index/fid/119">Godaddy注册的域名如何使用DNSPod</a></li>
+<li>等待域名解析生效</li>
 </ul>
+
 
 <p>域名的配置部分完成。</p>
 
-<h4 id="section-1">绑定域名</h4>
+<h4>绑定域名</h4>
+
 <p>我们在第一部分就提到了在DNS部分的设置，再来看在GitHub的配置，要想让<code>username.github.io</code>能通过你自己的域名来访问，需要在项目的根目录下新建一个名为<code>CNAME</code>的文件，文件内容形如：</p>
 
 <pre><code>robinzhou.com
@@ -92,10 +96,12 @@
 
 <p>设置成功后，根据DNS的情况，最长可能需要一天才能生效，耐心等待吧。</p>
 
-<h3 id="jekyll">Jekyll模板系统</h3>
+<h3>Jekyll模板系统</h3>
+
 <p>GitHub Pages为了提供对HTML内容的支持，选择了<a href="https://github.com/mojombo/jekyll" title="Jekyll">Jekyll</a>作为模板系统，Jekyll是一个强大的静态模板系统，作为个人博客使用，基本上可以满足要求，也能保持管理的方便，你可以查看<a href="https://github.com/mojombo/jekyll/blob/master/README.textile">Jekyll官方文档</a>。</p>
 
-<h4 id="jekyll-1">Jekyll基本结构</h4>
+<h4>Jekyll基本结构</h4>
+
 <p>Jekyll的核心其实就是一个文本的转换引擎，用你最喜欢的标记语言写文档，可以是Markdown、Textile或者HTML等等，再通过<code>layout</code>将文档拼装起来，根据你设置的URL规则来展现，这些都是通过严格的配置文件来定义，最终的产出就是web页面。</p>
 
 <p>基本的Jekyll结构如下：</p>
@@ -114,56 +120,67 @@
 
 <p>简单介绍一下他们的作用：</p>
 
-<h5 id="configyml">_config.yml</h5>
+<h5>_config.yml</h5>
+
 <p>配置文件，用来定义你想要的效果，设置之后就不用关心了。</p>
 
-<h5 id="includes">_includes</h5>
+<h5>_includes</h5>
+
 <p>可以用来存放一些小的可复用的模块，方便通过<code>{ % include file.ext %}</code>（去掉前两个{中或者{与%中的空格，下同）灵活的调用。这条命令会调用_includes/file.ext文件。</p>
 
-<h5 id="layouts">_layouts</h5>
+<h5>_layouts</h5>
+
 <p>这是模板文件存放的位置。模板需要通过<a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter">YAML front matter</a>来定义，后面会讲到，<code>{ { content }}</code>标记用来将数据插入到这些模板中来。</p>
 
-<h5 id="posts">_posts</h5>
+<h5>_posts</h5>
+
 <p>你的动态内容，一般来说就是你的博客正文存放的文件夹。他的命名有严格的规定，必须是<code>2012-02-22-artical-title.MARKUP</code>这样的形式，MARKUP是你所使用标记语言的文件后缀名，根据_config.yml中设定的链接规则，可以根据你的文件名灵活调整，文章的日期和标记语言后缀与文章的标题的独立的。</p>
 
-<h5 id="site">_site</h5>
+<h5>_site</h5>
+
 <p>这个是Jekyll生成的最终的文档，不用去关心。最好把他放在你的<code>.gitignore</code>文件中忽略它。</p>
 
-<h5 id="section-2">其他文件夹</h5>
+<h5>其他文件夹</h5>
+
 <p>你可以创建任何的文件夹，在根目录下面也可以创建任何文件，假设你创建了<code>project</code>文件夹，下面有一个<code>github-pages.md</code>的文件，那么你就可以通过<code>yoursite.com/project/github-pages</code>访问的到，如果你是使用一级域名的话。文件后缀可以是<code>.html</code>或者<code>markdown</code>或者<code>textile</code>。这里还有很多的例子：<a href="https://github.com/mojombo/jekyll/wiki/Sites">https://github.com/mojombo/jekyll/wiki/Sites</a></p>
 
-<h3 id="jekyll-2">Jekyll的配置</h3>
+<h3>Jekyll的配置</h3>
+
 <p>Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去一一追究了，很多配置虽有用但是一般不需要去关心，<a href="https://github.com/mojombo/jekyll/wiki/configuration">官方配置文档</a>有很详细的说明，确实需要了可以去这里查，我们主要说两个比较重要的东西，一个是<code>Permalink</code>，还有就是自定义项。</p>
 
 <p><code>Permalink</code>项用来定义你最终的文章链接是什么形式，他有下面几个变量：</p>
 
 <ul>
-  <li><code>year</code> 文件名中的年份</li>
-  <li><code>month</code> 文件名中的月份</li>
-  <li><code>day</code> 文件名中的日期</li>
-  <li><code>title</code> 文件名中的文章标题</li>
-  <li><code>categories</code> 文章的分类，如果文章没有分类，会忽略</li>
-  <li><code>i-month</code> 文件名中的除去前缀0的月份</li>
-  <li><code>i-day</code> 文件名中的除去前缀0的日期</li>
+<li><code>year</code> 文件名中的年份</li>
+<li><code>month</code> 文件名中的月份</li>
+<li><code>day</code> 文件名中的日期</li>
+<li><code>title</code> 文件名中的文章标题</li>
+<li><code>categories</code> 文章的分类，如果文章没有分类，会忽略</li>
+<li><code>i-month</code> 文件名中的除去前缀0的月份</li>
+<li><code>i-day</code> 文件名中的除去前缀0的日期</li>
 </ul>
+
 
 <p>看看最终的配置效果：</p>
 
 <ul>
-  <li><code>permalink: pretty</code> /2009/04/29/slap-chop/index.html</li>
-  <li><code>permalink: /:month-:day-:year/:title.html</code> /04-29-2009/slap-chop.html</li>
-  <li><code>permalink: /blog/:year/:month/:day/:title</code> /blog/2009/04/29/slap-chop/index.html</li>
+<li><code>permalink: pretty</code> /2009/04/29/slap-chop/index.html</li>
+<li><code>permalink: /:month-:day-:year/:title.html</code> /04-29-2009/slap-chop.html</li>
+<li><code>permalink: /blog/:year/:month/:day/:title</code> /blog/2009/04/29/slap-chop/index.html</li>
 </ul>
+
 
 <p>我使用的是：</p>
 
 <ul>
-  <li><code>permalink: /:title</code> /github-pages</li>
+<li><code>permalink: /:title</code> /github-pages</li>
 </ul>
+
 
 <p>自定义项的内容，例如我们定义了<code>title:BeiYuu的博客</code>这样一项，那么你就可以在文章中使用<code>{ { site.title }}</code>来引用这个变量了，非常方便定义些全局变量。</p>
 
-<h3 id="yaml-front-matter">YAML Front Matter和模板变量</h3>
+<h3>YAML Front Matter和模板变量</h3>
+
 <p>对于使用YAML定义格式的文章，Jekyll会特别对待，他的格式要求比较严格，必须是这样的形式：</p>
 
 <pre><code>---
@@ -175,17 +192,19 @@ title: Blogging Like a Hacker
 <p>前后的<code>---</code>不能省略，在这之间，你可以定一些你需要的变量，layout就是调用<code>_layouts</code>下面的某一个模板，他还有一些其他的变量可以使用：</p>
 
 <ul>
-  <li><code>permalink</code> 你可以对某一篇文章使用通用设置之外的永久链接</li>
-  <li><code>published</code> 可以单独设置某一篇文章是否需要发布</li>
-  <li><code>category</code> 设置文章的分类</li>
-  <li><code>tags</code> 设置文章的tag</li>
+<li><code>permalink</code> 你可以对某一篇文章使用通用设置之外的永久链接</li>
+<li><code>published</code> 可以单独设置某一篇文章是否需要发布</li>
+<li><code>category</code> 设置文章的分类</li>
+<li><code>tags</code> 设置文章的tag</li>
 </ul>
+
 
 <p>上面的<code>title</code>就是自定义的内容，你也可以设置其他的内容，在文章中可以通过<code>{ { page.title }}</code>这样的形式调用。</p>
 
 <p>模板变量，我们之前也涉及了不少了，还有其他需要的变量，可以参考官方的文档：<a href="https://github.com/mojombo/jekyll/wiki/template-data" title="Jekyll Template Data">https://github.com/mojombo/jekyll/wiki/template-data</a></p>
 
-<h3 id="disqus">使用Disqus管理评论</h3>
+<h3>使用Disqus管理评论</h3>
+
 <p>模板部分到此就算是配置完毕了，但是Jekyll只是个静态页面的发布系统，想做到关爽场倒是很容易，如果想要评论呢？也很简单。</p>
 
 <p>现在专做评论模块的产品有很多，比如<a href="http://disqus.com/">Disqus</a>，还有国产的<a href="http://duoshuo.com/">多说</a>，Disqus对现在各种系统的支持都比较全面，到写博客为止，多说现在仅是WordPress的一个插件，所以我这里暂时也使用不了，多说与国内的社交网络紧密结合，还是有很多亮点的，值得期待一下。我先选择了Disqus。</p>
@@ -222,12 +241,13 @@ title: Blogging Like a Hacker
 
 <p>如果你不喜欢Disqus的样式，你也可以根据他生成的HTML结构，自己改写样式覆盖它的，Disqus现在也提供每个页面的评论数接口，<a href="http://docs.disqus.com/developers/universal/">帮助文档</a>在这里可以看到。</p>
 
-<h3 id="section-3">代码高亮插件</h3>
+<h3>代码高亮插件</h3>
+
 <p>如果写技术博客，代码高亮少不了，有两个可选插件<a href="http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine">DlHightLight代码高亮组件</a>和<a href="http://code.google.com/p/google-code-prettify/">Google Code Prettify</a>。DLHightLight支持的语言相对较少一些，有js、css、xml和html，Google的高亮插件基本上任何语言都支持，也可以自定义语言，也支持自动识别，也有行号的特别支持。</p>
 
 <p>Google的高亮插件使用也比较方便，只需要在<code>&lt;pre&gt;</code>的标签上加入<code>prettyprint</code>即可。所以我选择了Google Code Prettify。</p>
 
-<h3 id="jekyll-3">本地jekyll环境</h3>
+<h3>本地jekyll环境</h3>
 
 <p>由于写blog时jekyll已经安装好了，就不在说如何安装了，简单说下jekyll的基础使用</p>
 
@@ -251,17 +271,16 @@ $ jekyll serve
 $ jekyll serve --watch
 </code></pre>
 
-<h3 id="section-4">结语</h3>
-<p>如果你跟着这篇不那么详尽的教程，成功搭建了自己的博客，恭喜你！剩下的就是保持热情的去写自己的文章吧。</p>
+<h3>结语</h3>
 
+<p>如果你跟着这篇不那么详尽的教程，成功搭建了自己的博客，恭喜你！剩下的就是保持热情的去写自己的文章吧。</p>
 
 					</article>
 					<p class="author_date">发表于:<time> 08 Oct 2014</time></p>
 
 				</div>
-
 				<!-- 多说评论框 start -->
-				<div class="ds-thread" data-thread-key="/2014/10/08/github-blog" data-title="搭建github blog" data-url=""></div>
+				<div class="ds-thread" data-thread-key="/2014/10/08/github-blog" data-title="搭建github blog" data-url="http://robinzhou.com/2014/10/08/github-blog.html"></div>
 				<!-- 多说评论框 end -->
 				<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 				<script type="text/javascript">

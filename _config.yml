@@ -1,2 +1,4 @@
-baseurl: 
-
+baseurl:   
+markdown:         rdiscount
+pygments:         true
+domain: http://robinzhou.com
