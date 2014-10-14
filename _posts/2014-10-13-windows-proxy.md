@@ -26,7 +26,7 @@ title:  windows自动切换代理
  9. 不包含 * 的字符串 直接匹配访问的 URL
  
 ### PAC语法
-FindProxyForURL函数有三种可能的子妇产返回值，一是`DIRECT`,就是直接连接，不通过代理；二是`PROXY proxyaddr:port`，其中proxtaddr和port分别是代理的地址和代理的端口；三是`SOCKS socksaddr:port`，其中socksaddr和port分别是socks代理的地址和端口，一个自动代理文件可以是多个选择的组合，其中用分号(;)隔开，如
+FindProxyForURL函数有三种可能的返回值，一是`DIRECT`,就是直接连接，不通过代理；二是`PROXY proxyaddr:port`，其中proxtaddr和port分别是代理的地址和代理的端口；三是`SOCKS socksaddr:port`，其中socksaddr和port分别是socks代理的地址和端口，一个自动代理文件可以是多个选择的组合，其中用分号(;)隔开，如
 
 ```
 function FindProxyForURL(url,host){
