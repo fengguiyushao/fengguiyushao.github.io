@@ -1,6 +1,11 @@
 ---
-layout: default_post
-title:  windows自动切换代理
+layout:     post
+title:      "windows自动切换代理"
+date:       2014-10-13 12:00:00
+author:     "robinzhou"
+catalog: true
+tags:
+    - proxy 
 ---
 
 ### windows平台代理设置

@@ -1,6 +1,12 @@
 ---
-layout: default_post
-title:  搭建github blog
+layout:     post
+title:      "搭建github blog"
+date:       2014-10-08 12:00:00
+author:     "robinzhou"
+catalog: true
+tags:
+    - github 
+    - blog
 ---
     
 ### 搭建github blog
