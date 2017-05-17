@@ -6,8 +6,6 @@ author:     "robinzhou"
 catalog: true
 tags:
     - java
-    - spring
-    - web
 ---
 
 ### Spring Boot搭建环境
