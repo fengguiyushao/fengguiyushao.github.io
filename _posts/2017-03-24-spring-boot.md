@@ -7,6 +7,7 @@ catalog: true
 tags:
     - java
     - web
+    - spring
 ---
 
 ### Spring Boot搭建环境
