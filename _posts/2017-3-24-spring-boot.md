@@ -1,6 +1,6 @@
 ---
-layout:		post
-title:		"Spring Boot搭建环境"
+layout:     post
+title:      "Spring Boot搭建环境"
 date:       2017-03-24 12:00:00
 author:     "robinzhou"
 catalog: true
@@ -9,6 +9,7 @@ tags:
     - spring
   	- web
 ---
+
 
 
 ### Spring Boot搭建环境
