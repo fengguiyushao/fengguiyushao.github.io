@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Spring Boot搭建环境"
-date:       2017-03-24 12:00:00
+title:      "windows自动切换代理"
+date:       2014-10-13 12:00:00
 author:     "robinzhou"
 catalog: true
 tags:
