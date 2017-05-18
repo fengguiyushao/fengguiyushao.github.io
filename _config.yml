@@ -43,7 +43,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "仗剑红尘已是癫，有酒平步上青天。游星戏斗弄日月，醉卧云端笑人间。"
+sidebar-about-description: "仗剑红尘已是癫，<br>有酒平步上青天。<br>游星戏斗弄日月，<br>醉卧云端笑人间。"
 #sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
